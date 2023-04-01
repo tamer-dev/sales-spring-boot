@@ -22,13 +22,15 @@ public class ProductController {
     }
     @GetMapping("/product-name")
     public ProductNameResponse getProductName(){
-        return  new ProductNameResponse ("product one",List.of("larg","small"),4.5,"");
+        return  new ProductNameResponse ("product one",List.of("larg","small"),4.5,"" ,new ProductInfo("Red","Box"));
     }
+    record ProductInfo (String color , String unitName){}
 
     record ProductNameResponse (
             String productName,
             List<String> ProductSizes,
             double ProductPrise ,
-            String Desc
+            String Desc,
+            ProductInfo productInfo
     ){}
 }
