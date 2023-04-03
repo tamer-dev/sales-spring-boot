@@ -1,8 +1,31 @@
 package com.warehouses.sales.models;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
+@Entity
+@Table(name = "customers")
 public class CustomerModel {
+
+    @Id
+    @Column(name="U_id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+//    @SequenceGenerator(
+//            name = "customer_id_sequence",
+//            sequenceName = "customer_id_sequence",
+//            allocationSize = 1
+//    )
+//    @GeneratedValue(
+//            strategy = GenerationType.SEQUENCE,
+//            generator = "customer_id_sequence"
+//    )
+
+    private Integer id;
+    private String name;
+    private String email ;
+    private Integer age;
+
     public CustomerModel(Integer id, String name, String email, Integer age) {
         this.id = id;
         this.name = name;
@@ -14,10 +37,7 @@ public class CustomerModel {
 
     }
 
-    private Integer id;
-    private String name;
-    private String email ;
-    private Integer age;
+
 
 
     public Integer getId() {
