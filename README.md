@@ -12,7 +12,7 @@
                 url: jdbc:mysql://localhost:3306/{DatabaseName}
                 username: {DatabaseUser}
                 password: {password}
-
+3. run the project
 
 ### This project use :
 
