@@ -4,10 +4,7 @@ import com.warehouses.sales.models.CustomerModel;
 import com.warehouses.sales.repository.CustomerRepository;
 import com.warehouses.sales.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -38,5 +35,10 @@ public class CustomerController {
         customerRepository.save(customer);
 
     }
+    @DeleteMapping("/customers/{customerID}")
+    public void deleteCustomer(@PathVariable("customerID") Integer id){
+        customerRepository.deleteById(id);
+    }
+
 
 }
