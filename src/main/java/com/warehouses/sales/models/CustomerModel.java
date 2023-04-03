@@ -9,17 +9,20 @@ import java.util.Objects;
 public class CustomerModel {
 
     @Id
-    @Column(name="U_id")
+    @Column(name="id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-//    @SequenceGenerator(
-//            name = "customer_id_sequence",
-//            sequenceName = "customer_id_sequence",
-//            allocationSize = 1
-//    )
-//    @GeneratedValue(
-//            strategy = GenerationType.SEQUENCE,
-//            generator = "customer_id_sequence"
-//    )
+
+    // this code for creating  Sequence (this for database Oracle or postgres ,etc...)
+
+    //    @SequenceGenerator(
+    //            name = "customer_id_sequence",
+    //            sequenceName = "customer_id_sequence",
+    //            allocationSize = 1
+    //    )
+    //    @GeneratedValue(
+    //            strategy = GenerationType.SEQUENCE,
+    //            generator = "customer_id_sequence"
+    //    )
 
     private Integer id;
     private String name;
@@ -36,8 +39,6 @@ public class CustomerModel {
     public CustomerModel() {
 
     }
-
-
 
 
     public Integer getId() {
