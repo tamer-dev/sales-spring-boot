@@ -11,18 +11,14 @@ import java.util.List;
 public class ProductController {
     @Autowired
     private ProductService productService;
-    @GetMapping("/welcome")
-    public void greeting(){
 
-        System.out.println("hi");
-    }
-    @GetMapping("/")
+    @GetMapping("/print-fixed-product-name")
     public String homePage(){
         return productService.printProductName();
     }
-    @GetMapping("/product-name")
+    @GetMapping("/fixed-product-info")
     public ProductNameResponse getProductName(){
-        return  new ProductNameResponse ("product one",List.of("larg","small"),4.5,"" ,new ProductInfo("Red","Box"));
+        return  new ProductNameResponse ("product one",List.of("large","small"),4.5,"" ,new ProductInfo("Red","Box"));
     }
     record ProductInfo (String color , String unitName){}
 

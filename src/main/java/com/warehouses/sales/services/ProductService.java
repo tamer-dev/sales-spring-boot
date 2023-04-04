@@ -11,6 +11,5 @@ public class ProductService
     private ProductModel productModel;
     public String printProductName(){
         return productModel.getProductName();
-        //return "Product 1";
     }
 }
