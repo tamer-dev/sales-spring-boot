@@ -1,5 +1,5 @@
 # Sales-spring-boot
-## This just a simple API - using spring boot 
+## This just a very simple API demo - using java spring boot 
 
 ### Quick Start
 
