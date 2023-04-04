@@ -6,7 +6,7 @@ server:
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/restapi
-    username: root
+    username: tamer
     password: 12345
   jpa:
     hibernate:
